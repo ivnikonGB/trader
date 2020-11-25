@@ -10,42 +10,177 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="container-fluid main-header">
-    <div class="row">
-      <div class="col-xl-auto">
-        <a href="index.html">
-          <img src="img/logo.png" alt="Логотип Трэйдер" class="main-logo">
-        </a>
-      </div>
-      <div class="col-xl">
-        <div class="row justify-content-xl-start info-row">
-          <div class="col-xl-auto info-bar">
-            <ul class="row justify-content-xl-center">
-              <li class="col-xl-auto">
+  <div class="container-fluid">
+    <header class="main-header">
+      <div class="row">
+        <div class="col-xl-auto main-logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Логотип Трэйдер" class="">
+          </a>
+        </div>
+        <div class="col-xl-auto">
+          <div class="d-flex justify-content-xl-start info-row">  
+            <div class="d-flex align-items-center info-bar">
                 <p>Свободная маржа: <span>730 358</span> Р</p>
-              </li>
-              <li class="col-xl-auto">
                 <p>Средства: <span>731 458</span> Р</p>
-              </li>
-              <li class="col-xl-auto">
                 <p>Депозит: <span>724 404</span> Р</p>
-              </li>
-            </ul>
+            </div>
+            <button class="btn btn-outline-light">Создать сделку +</button>     
+            <button class="btn btn-outline-success">Пополнить $</button>
+            <button class="btn btn-outline-danger">Снять $</button>
           </div>
-          <div class="col-xl">
-            <button class="col-xl btn btn-outline-light">Создать сделку +</button>
+        </div>
+        <div class="col-xl-auto">
+          <div class="d-flex align-items-center bill-search">
+            <p>Счёт</p>
+            <button
+              class="btn btn-outline-light dropdown-toggle"
+              type="button"
+              id="billChooseBtn"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Какой-то счёт
+            </button>
+            <div class="dropdown-menu" aria-labelledby="billChooseBtn">
+              <a href="#" class="dropdown-item">#123456</a>
+              <a href="#" class="dropdown-item">#238759837598</a>
+              <a href="#" class="dropdown-item">#3458734958739</a>
+            </div>
           </div>
-          <div class="col-xl">
-            <button class="col-xl btn btn-outline-success">Пополнить $</button>
-          </div>
-          <div class="col-xl">
-            <button class="col-xl btn btn-outline-danger">Снять $</button>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-xl-auto">
+          <div class="d-flex align-items-center filter-panel">
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="typeChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Тип
+              </button>
+              <div class="dropdown-menu" aria-labelledby="typeChooseBtn">
+                <a href="#" class="dropdown-item">Тип 1</a>
+                <a href="#" class="dropdown-item">Тип 2</a>
+                <a href="#" class="dropdown-item">Тип 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="directionChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Направление
+              </button>
+              <div class="dropdown-menu" aria-labelledby="directionChooseBtn">
+                <a href="#" class="dropdown-item">Направление 1</a>
+                <a href="#" class="dropdown-item">Направление 2</a>
+                <a href="#" class="dropdown-item">Направление 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="marketChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Рынок
+              </button>
+              <div class="dropdown-menu" aria-labelledby="marketChooseBtn">
+                <a href="#" class="dropdown-item">Рынок 1</a>
+                <a href="#" class="dropdown-item">Рынок 2</a>
+                <a href="#" class="dropdown-item">Рынок 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="sectorChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Сектор
+              </button>
+              <div class="dropdown-menu" aria-labelledby="sectorChooseBtn">
+                <a href="#" class="dropdown-item">Сектор 1</a>
+                <a href="#" class="dropdown-item">Сектор 2</a>
+                <a href="#" class="dropdown-item">Сектор 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="yearChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Год открытия
+              </button>
+              <div class="dropdown-menu" aria-labelledby="yearChooseBtn">
+                <a href="#" class="dropdown-item">Год открытия 1</a>
+                <a href="#" class="dropdown-item">Год открытия 2</a>
+                <a href="#" class="dropdown-item">Год открытия 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="monthChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Месяц открытия
+              </button>
+              <div class="dropdown-menu" aria-labelledby="monthChooseBtn">
+                <a href="#" class="dropdown-item">Месяц открытия 1</a>
+                <a href="#" class="dropdown-item">Месяц открытия 2</a>
+                <a href="#" class="dropdown-item">Месяц открытия 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <button
+                class="btn btn-outline-light dropdown-toggle"
+                type="button"
+                id="dataChooseBtn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Дата открытия
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dataChooseBtn">
+                <a href="#" class="dropdown-item">Дата открытия 1</a>
+                <a href="#" class="dropdown-item">Дата открытия 2</a>
+                <a href="#" class="dropdown-item">Дата открытия 3</a>
+              </div>
+            </div>
+            <div class="filter-item">
+              <a href="#" id="cleanFilter">Очистить фильтр</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-  </header>
+    </header>
+  </div>
   <div class="container-fluid">
     <nav class="nav flex-column main-nav">
       <ul class="main-menu">
@@ -81,6 +216,7 @@
     </main>
   </div>
   
-  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
 </body>
 </html>

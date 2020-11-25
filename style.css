@@ -37,22 +37,71 @@ a {
   color: white;
 }
 
-.info-row {
-  font-size: 13px;
-  font-weight: bold;
+.main-logo {
+  margin-left: 11px;
+  margin-top: 11px;
 }
 
-.info-row button {
+.info-row, .bill-search {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 19px;
+}
+
+.info-row button, .bill-search button {
   width: 147px;
   font-size: 13px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 15px;
+  margin-right: 13px;
 }
 
 .info-bar {
   background-color: white;
   color: black;
   border-radius: 10px;
+  padding-left: 7px;
+  padding-right: 11px;
+  margin-right: 21px;
+}
+
+.info-bar p, .bill-search p {
+  margin-bottom: 0;
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+.info-bar p:last-child {
+  margin-right: 0;
+}
+
+.bill-search p {
+  margin-right: 9px;
+  margin-left: 117px;
+}
+
+.bill-search button {
+  font-weight: normal;
+}
+
+.filter-panel {
+  margin-top: 10px;
+  margin-left: 83px;
+}
+
+.filter-item {
+  margin-right: 7px;
+}
+
+.filter-item button {
+  font-size: 13px;
+  border-radius: 15px;
+}
+
+#cleanFilter {
+  font-size: 13px;
+  text-decoration: underline;
+  margin-left: 25px;
 }
 
 .main-menu-item, .file-menu-item {
