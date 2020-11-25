@@ -1,0 +1,103 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header {
+  height: 96px;
+}
+
+.main-header, .main-nav {
+  background-color: #001433;
+  color: white;
+}
+
+.info-row {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.info-row button {
+  width: 147px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.info-bar {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.main-menu-item, .file-menu-item {
+  position: relative;
+  padding-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main-menu-item::before, .file-menu-item::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  
+  width: 21px;
+  height: 29px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.main-menu-item:nth-child(1)::before {
+  background-image: url('img/main_menu_icon.svg');
+  color: aquamarine;
+}
+
+.main-menu-item:nth-child(2)::before {
+  background-image: url('img/pie_chart_menu_icon.svg');
+}
+
+.main-menu-item:nth-child(3)::before {
+  background-image: url('img/stats_menu_icon.svg');
+}
+
+.main-menu-item:nth-child(4)::before {
+  background-image: url('img/bills_menu_icon.svg');
+  left: 15px;
+}
+
+.file-menu-item:nth-child(1)::before {
+  background-image: url('img/info_menu_icon.svg');
+}
+
+.file-menu-item:nth-child(2)::before {
+  background-image: url('img/downloads_menu_icon.svg');
+}
