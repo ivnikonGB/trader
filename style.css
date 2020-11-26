@@ -118,46 +118,17 @@ a {
   padding-left: 7px;
 }
 
-.main-menu-item, 
-.file-menu-item,
-.user-menu-item {
-  position: relative;
-  padding-left: 50px;
+.main-menu-item, .file-menu-item
+ {
+  padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.main-menu-item::before, 
-.file-menu-item::before,
-.user-menu-item::before {
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  left: 11px;
-  
-  width: 21px;
-  height: 29px;
-
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.main-menu-item:nth-child(1)::before {
-  background-image: url('img/main_menu_icon.svg');
-}
-
-.main-menu-item:nth-child(2)::before {
-  background-image: url('img/pie_chart_menu_icon.svg');
-}
-
-.main-menu-item:nth-child(3)::before {
-  background-image: url('img/stats_menu_icon.svg');
-}
-
-.main-menu-item:nth-child(4)::before {
-  background-image: url('img/bills_menu_icon.svg');
-  left: 15px;
+.user-menu-item {
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .file-menu-item:nth-child(1)::before {
