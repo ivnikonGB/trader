@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container-fluid">
-    <header class="main-header">
+  <div class="container-fluid main-header">
+    <header class="">
       <div class="row">
         <div class="col-xl-auto main-logo">
           <a href="index.html">
@@ -182,7 +182,8 @@
     </header>
   </div>
   <div class="container-fluid">
-    <nav class="nav flex-column main-nav">
+    <div class="row">
+    <nav class="nav col-xl-auto flex-column justify-content-xl-between main-nav">
       <ul class="main-menu">
         <li class="main-menu-item active-menu-item">
           <a href="#">Главная</a>
@@ -197,6 +198,7 @@
           <a href="#">Счета</a>
         </li>
       </ul>
+      <div class="bottom-menu">
       <ul class="file-menu">
         <li class="file-menu-item">
           <a href="#">Информация</a>
@@ -210,10 +212,12 @@
           <a href="#">Вход</a>
         </li>
       </ul>
+    </div>
     </nav>
-    <main>
+    <main class="col-xl">
       
     </main>
+  </div>
   </div>
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

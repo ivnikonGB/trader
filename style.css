@@ -54,6 +54,8 @@ a {
   font-weight: bold;
   border-radius: 15px;
   margin-right: 13px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .info-bar {
@@ -82,10 +84,12 @@ a {
 
 .bill-search button {
   font-weight: normal;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .filter-panel {
-  margin-top: 10px;
+  margin-top: 3px;
   margin-left: 83px;
 }
 
@@ -96,6 +100,8 @@ a {
 .filter-item button {
   font-size: 13px;
   border-radius: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #cleanFilter {
@@ -104,14 +110,23 @@ a {
   margin-left: 25px;
 }
 
-.main-menu-item, .file-menu-item {
+.main-nav {
+  height: 100vh;
+  padding-left: 7px;
+}
+
+.main-menu-item, 
+.file-menu-item,
+.user-menu-item {
   position: relative;
   padding-left: 50px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.main-menu-item::before, .file-menu-item::before {
+.main-menu-item::before, 
+.file-menu-item::before,
+.user-menu-item::before {
   content: "";
 
   position: absolute;
@@ -149,4 +164,21 @@ a {
 
 .file-menu-item:nth-child(2)::before {
   background-image: url('img/downloads_menu_icon.svg');
+}
+
+.user-menu-item:nth-child(1) {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.user-menu-item:nth-child(1)::before {
+  background-image: url('img/user_color_menu_icon.svg');
+  left: 0px;
+  top: -9px;
+  width: 42px;
+  height: 42px;
+}
+
+main {
+  background-color: #e5e5e5;
 }
