@@ -51,7 +51,9 @@ a {
   margin-top: 19px;
 }
 
-.info-row button, .bill-search button {
+.info-row button, 
+.bill-search button,
+.header-button {
   width: 147px;
   font-size: 13px;
   font-weight: bold;
@@ -82,7 +84,7 @@ a {
 
 .bill-search p {
   margin-right: 9px;
-  margin-left: 117px;
+  /* margin-left: 117px; */
 }
 
 .bill-search button {
@@ -111,6 +113,66 @@ a {
   font-size: 13px;
   text-decoration: underline;
   margin-left: 25px;
+}
+
+.drop-menu {
+  width: 100%;
+  background: rgba(0, 20, 51, 0.88);
+  backdrop-filter: blur(15px);
+  padding-left: 12px;
+  padding-top: 35px;
+}
+
+.close-menu {
+  position: fixed; 
+  top: 10px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+#filterMenu .filter-item button {
+  width: 286px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.filter-menu-text {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.filter-menu-text::after {
+  content: url(img/down_arrow.svg);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 10px;
+}
+
+.add-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 47px;
+  padding-bottom: 37px;
+}
+
+.add-menu button {
+  margin-bottom: 30px;
+  width: 289px;
+}
+
+.bill-search-menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 59px;
+  padding-bottom: 51px;
+}
+
+.bill-search-menu button {
+  width: 289px;
 }
 
 .main-nav {
