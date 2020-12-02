@@ -12,17 +12,24 @@
 <body>
   <header class="container-fluid main-header">
     <div class="row justify-content-between align-items-center h-100">
-        <button class="col-auto d-xl-none navbar-toggler collapsed">
+        <button 
+          class="col-auto d-xl-none navbar-toggler collapsed"
+          type="button" data-toggle="collapse" 
+          data-target="#mainMenu" 
+          aria-controls="mainMenu" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
           <img src="img/menu_btn.png" alt="">
         </button>
-      <div class="col-auto main-logo">
+      <div class="col-auto mt-xl-2 ml-xl-2 main-logo">
         <a href="index.html">
           <img src="img/logo.png" alt="Логотип Трэйдер" class="">
         </a>
       </div>
-      <div class="col">
+      <div class="col pt-xl-3">
         <div class="d-flex justify-content-xl-start info-row">  
-          <div class="d-flex align-items-center info-bar">
+          <div class="align-items-center d-none d-md-flex info-bar">
               <p>Свободная маржа: <span>730&nbsp;358</span>&nbsp;&#8381;</p>
               <p>Средства: <span>731&nbsp;458</span>&nbsp;&#8381;</p>
               <p>Депозит: <span>724&nbsp;404</span>&nbsp;&#8381;</p>
@@ -32,9 +39,9 @@
           <button class="btn btn-outline-danger d-none d-xl-block">Снять $</button>
         </div>
       </div>
-      <div class="col-auto d-xl-none">
+      <div class="col-auto d-xl-none p-0">
         <button 
-          class="navbar-toggler collapsed" 
+          class="navbar-toggler collapsed mobile-menu-btn" 
           type="button" data-toggle="collapse" 
           data-target="#filterMenu" 
           aria-controls="filterMenu" 
@@ -173,12 +180,12 @@
               <a href="#" class="dropdown-item">Дата открытия 3</a>
             </div>
           </div>
-          <div class="filter-item">
+          <div class="filter-item ">
             <a href="#" id="cleanFilter">Очистить фильтр</a>
           </div>
         </div>
         <button 
-          class="navbar-toggler collapsed" 
+          class="navbar-toggler collapsed mobile-menu-btn" 
           type="button" data-toggle="collapse" 
           data-target="#addMenu" 
           aria-controls="filterMenu" 
@@ -205,7 +212,7 @@
           </div>
         </div>
         <button 
-          class="navbar-toggler collapsed" 
+          class="navbar-toggler collapsed mobile-menu-btn" 
           type="button" data-toggle="collapse" 
           data-target="#billSearchMenu" 
           aria-controls="billSearchMenu" 
@@ -264,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-auto w-100 d-none d-xl-block">
+      <div class="col-xl-auto align-self-start w-100 d-none d-xl-block">
         <div class="d-flex align-items-center filter-panel">
           <div class="filter-item">
             <button
@@ -390,11 +397,23 @@
           </div>
         </div>
       </div>
+      <div class="col-md-auto w-100 d-md-none mr-4 ml-4">
+        <div class="row info-bar-label">
+          <div class="col-4 p-0">Свободная маржа: </div>
+          <div class="col-4 p-0">Средства:</div>
+          <div class="col-4 p-0">Депозит:</div>
+        </div>
+        <div class="row info-bar-value">
+          <div class="col-4 p-0">730&nbsp;358&nbsp;&#8381;</div>
+          <div class="col-4 p-0">731&nbsp;458</span>&nbsp;&#8381;</div>
+          <div class="col-4 p-0">724&nbsp;404&nbsp;&#8381;</div>
+        </div>
+      </div>
     </div> 
   </header>
-  <!-- <div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
-    <nav class="nav col-xl-auto flex-column justify-content-xl-between main-nav">
+    <nav class="nav col-auto flex-column justify-content-between d-none d-xl-block main-nav">
       <ul class="main-menu">
         <li class="main-menu-item active-menu-item">
           <a href="#"> 
@@ -516,432 +535,210 @@
       </ul>
     </div>
     </nav>
-    <main class="col-xl">
-      <div class="d-flex">
-        <div class="left-column">
-          <div class="d-flex justify-content-xl-start">
-            <div class="card chart-card">
-              <button class="close">&times;</button>
-              <div class="d-flex justify-content-xl-between">
-                <div class="chart-card-data">
-                  <h5 class="card-title">Аккум.Возврат $</h5>
-                  <p class="card-text">$ 14, 402.57</p>
-                  <p class="card-trend card-trend-up">76,44 %</p>
-                </div>
-                <div class="chart-card-img">
-                  <img src="img/chart-card-1.png" alt="">
-                </div>
-              </div>
+    <main class="col main-content">
+      <div id="mainMenu" class="collapse">
+        <ul class="main-menu">
+          <li class="main-menu-item active-menu-item">
+            <a href="#"> 
+              <img src="img/main_menu_icon.svg" alt="Главная">
+            </a>
+          </li>
+          <li class="main-menu-item">
+            <a href="#" class="pie-chart-menu">
+              <img src="img/pie_chart_menu_icon.svg" alt="Отчёты">
+            </a>
+            <div class="pie-chart-submenu">
+              <h3>Отчёты</h3>
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Обзор">
+                    Обзор
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Ежечасно">
+                    Ежечасно
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Будний день">
+                    Будний день
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Ежемесячно">
+                    Ежемесячно
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Прайс">
+                    Прайс
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Объём">
+                    Объём
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Символы">
+                    Символы
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Установки">
+                    Установки
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Ошибки">
+                    Ошибки
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Сектор">
+                    Сектор
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Рыночная капитализация">
+                    Рыночная капитализация
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/pie_chart_menu_icon.svg" alt="Изменить процент">
+                    Изменить процент
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="card chart-card">
-              <button class="close">&times;</button>
-              <div class="d-flex justify-content-xl-between">
-                <div class="chart-card-data">
-                  <h5 class="card-title">Фактор прибыли</h5>
-                  <p class="card-text">1.4291</p>
-                  <p class="card-trend card-trend-down">-15,23 %</p>
-                </div>
-                <div class="chart-card-img">
-                  <img src="img/chart-card-2.png" alt="">
-                </div>
+          </li>
+          <li class="main-menu-item">
+            <a href="#">
+              <img src="img/stats_menu_icon.svg" alt="Статистика">
+            </a>
+          </li>
+          <li class="main-menu-item">
+            <a href="#">
+              <img src="img/bills_menu_icon.svg" alt="Счета">
+            </a>
+          </li>
+        </ul>
+        <div class="bottom-menu">
+          <ul class="file-menu">
+            <li class="file-menu-item">
+              <a href="#">
+                <img src="img/info_menu_icon.svg" alt="Информация">
+              </a>
+            </li>
+            <li class="file-menu-item">
+              <a href="#">
+                <img src="img/downloads_menu_icon.svg" alt="Выгрузки">
+              </a>
+            </li>
+          </ul>
+          <ul class="user-menu">
+            <li class="user-menu-item">
+              <a href="#">
+                <img src="img/user_color_menu_icon.svg" alt="Пользователь">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-xl-row flex-wrap align-content-start">
+        <div class="d-flex justify-content-start chart-card-block">
+          <div class="card chart-card">
+            <button class="close">&times;</button>
+            <div class="d-flex justify-content-xl-between">
+              <div class="chart-card-data">
+                <h5 class="card-title">Аккум.Возврат $</h5>
+                <p class="card-text">$ 14, 402.57</p>
+                <p class="card-trend card-trend-up">76,44 %</p>
               </div>
-            </div>
-            <div class="card chart-card">
-              <button class="close">&times;</button>
-              <div class="d-flex justify-content-xl-between">
-                <div class="chart-card-data">
-                  <h5 class="card-title">Средняя доходность</h5>
-                  <p class="card-text">$ 46.61</p>
-                  <p class="card-trend card-trend-up">76,44 %</p>
-                </div>
-                <div class="chart-card-img">
-                  <img src="img/chart-card-3.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="card chart-card">
-              <button class="close">&times;</button>
-              <div class="d-flex justify-content-xl-between">
-                <div class="chart-card-data">
-                  <h5 class="card-title">Выигрыш %</h5>
-                  <p class="card-text">55.88%</p>
-                  <p class="card-trend card-trend-down">-7,69 %</p>
-                </div>
-                <div class="chart-card-img round-diagram">
-                  <img src="img/chart-card-4.png" alt="">
-                </div>
+              <div class="chart-card-img">
+                <img src="img/chart-card-1.png" alt="">
               </div>
             </div>
           </div>
-          <div class="d-flex">
-            <div class="header-chart-card table-card">
-              <div class="d-flex header-card-title">
-                <span>checkbox</span>
-                <span>статус</span>
-                <span>дата открытия</span>
-                <span>инструмент</span>
-                <span>вход $</span>
-                <span>выход $</span>
-                <span>прибыль $</span>
-                <span>направление</span>
-                <span>время в сделке</span>
+          <div class="card chart-card">
+            <button class="close">&times;</button>
+            <div class="d-flex justify-content-xl-between">
+              <div class="chart-card-data">
+                <h5 class="card-title">Фактор прибыли</h5>
+                <p class="card-text">1.4291</p>
+                <p class="card-trend card-trend-down">-15,23 %</p>
               </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox1" checked>
-                  <label for="_checkbox1">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">NF</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">nflx</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-close">закрыта</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">ceqp</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox" checked>
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-close">закрыта</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">hepa</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-close">закрыта</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay"></span>
-                  <span class="income income-negative"></span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-close">закрыта</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-win">выигрыш</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">pctl</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-positive">+$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
-              </div>
-              <div class="d-flex table-card-row">
-                <div class="mycheckbox">
-                  <input type="checkbox" id="_checkbox">
-                  <label for="_checkbox">
-                    <div id="tick_mark"></div>
-                  </label>
-                </div>
-                <div class="d-flex main-info-row">
-                  <span class="info-pill status-open">открыто</span>
-                  <span class="open-date">21.11.2020</span>
-                  <span class="tool">FB</span>
-                  <span class="enter-pay">$ 25.00</span>
-                  <span class="exit-pay">$ 25.00</span>
-                  <span class="income income-negative">-$ 200.00</span>
-                  <span class="info-pill direction-pill">long</span>
-                  <span class="duration">2:10:25</span>
-                </div>
+              <div class="chart-card-img">
+                <img src="img/chart-card-2.png" alt="">
               </div>
             </div>
-            
-            <div class="center-column">
-              <div class="card header-chart-card">
-                <button class="close">&times;</button>
-                <h5 class="header-card-title">Эффективность Аккаунта</h5>
-                <table class="table-eff">
-                  <thead>
-                    <th>Средний возврат</th>
-                    <th>Средняя доходность %</th>
-                    <th>Коэффициент выигрышей</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>46,61 $</td>
-                      <td>1,61</td>
-                      <td>55,34</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <img src="img/eff_diag.png" alt="" class="eff-diag"> 
+          </div>
+          <div class="card chart-card">
+            <button class="close">&times;</button>
+            <div class="d-flex justify-content-xl-between">
+              <div class="chart-card-data">
+                <h5 class="card-title">Средняя доходность</h5>
+                <p class="card-text">$ 46.61</p>
+                <p class="card-trend card-trend-up">76,44 %</p>
               </div>
-              <div class="card header-chart-card">
-                <button class="close">&times;</button>
-                <h5 class="header-card-title">Возможная производительность</h5>
-                <img src="img/expected_prod.png" alt="" class="expected-prod">
+              <div class="chart-card-img">
+                <img src="img/chart-card-3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="card chart-card">
+            <button class="close">&times;</button>
+            <div class="d-flex justify-content-xl-between">
+              <div class="chart-card-data">
+                <h5 class="card-title">Выигрыш %</h5>
+                <p class="card-text">55.88%</p>
+                <p class="card-trend card-trend-down">-7,69 %</p>
+              </div>
+              <div class="chart-card-img round-diagram">
+                <img src="img/chart-card-4.png" alt="">
               </div>
             </div>
           </div>
         </div>
-        <div class="right-column">
-          <div class="card header-chart-card">
+        <div class="d-flex d-xl-none header-chart-tablets">
+          <div id="effCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Эффективность Аккаунта</h5>
+            <table class="table-eff">
+              <thead>
+                <th>Средний возврат</th>
+                <th>Средняя доходность %</th>
+                <th>Коэффициент выигрышей</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>46,61 $</td>
+                  <td>1,61</td>
+                  <td>55,34</td>
+                </tr>
+              </tbody>
+            </table>
+            <img src="img/eff_diag.png" alt="" class="eff-diag"> 
+          </div>
+          <div id="expectCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Возможная производительность</h5>
+            <img src="img/expected_prod.png" alt="" class="expected-prod">
+          </div>
+          <div id="pieCard" class="card header-chart-card">
             <button class="close">&times;</button>
             <h5 class="header-card-title">Доход/убыток %</h5>
             <img src="img/pie_legend.png" alt="" class="pie-legend">
@@ -949,7 +746,426 @@
             <span class="pie-income">70%</span>
             <span class="pie-outcome">30%</span>
           </div>
-          <div class="card header-chart-card">
+          <div id="feeCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Средняя комиссия</h5>
+            <div class="header-card-body">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <div class="fee-bar-legend">
+                <span class="fee-bar-date">21.11.2020</span>
+                <span class="fee-bar-value">56%</span>
+              </div>
+              <img src="img/fee_bar.png" alt="" class="fee-bar">
+              <p class="fee-bar-total-label">Итоговая средняя комиссия</p>
+              <p class="fee-bar-total">56%</p>
+            </div>
+          </div>
+        </div>
+        <div class="align-self-center align-self-xl-start header-chart-card table-card">
+          <div class="d-flex header-card-title">
+            <span>checkbox</span>
+            <span>статус</span>
+            <span>дата открытия</span>
+            <span>инструмент</span>
+            <span>вход $</span>
+            <span>выход $</span>
+            <span>прибыль $</span>
+            <span>направление</span>
+            <span>время в сделке</span>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox1" checked>
+              <label for="_checkbox1">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">NF</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">nflx</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-close">закрыта</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">ceqp</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox" checked>
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-close">закрыта</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">hepa</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-close">закрыта</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay"></span>
+              <span class="income income-negative"></span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-close">закрыта</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-win">выигрыш</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">pctl</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-positive">+$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+          <div class="d-flex table-card-row">
+            <div class="mycheckbox">
+              <input type="checkbox" id="_checkbox">
+              <label for="_checkbox">
+                <div id="tick_mark"></div>
+              </label>
+            </div>
+            <div class="d-flex main-info-row">
+              <span class="info-pill status-open">открыто</span>
+              <span class="open-date">21.11.2020</span>
+              <span class="tool">FB</span>
+              <span class="enter-pay">$ 25.00</span>
+              <span class="exit-pay">$ 25.00</span>
+              <span class="income income-negative">-$ 200.00</span>
+              <span class="info-pill direction-pill">long</span>
+              <span class="duration">2:10:25</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-xl-flex flex-column flex-wrap header-chart-card-block">
+          <div id="effCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Эффективность Аккаунта</h5>
+            <table class="table-eff">
+              <thead>
+                <th>Средний возврат</th>
+                <th>Средняя доходность %</th>
+                <th>Коэффициент выигрышей</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>46,61 $</td>
+                  <td>1,61</td>
+                  <td>55,34</td>
+                </tr>
+              </tbody>
+            </table>
+            <img src="img/eff_diag.png" alt="" class="eff-diag"> 
+          </div>
+          <div id="expectCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Возможная производительность</h5>
+            <img src="img/expected_prod.png" alt="" class="expected-prod">
+          </div>
+          <div id="pieCard" class="card header-chart-card">
+            <button class="close">&times;</button>
+            <h5 class="header-card-title">Доход/убыток %</h5>
+            <img src="img/pie_legend.png" alt="" class="pie-legend">
+            <img src="img/big_pie_chart.png" alt="" class="pie-chart">
+            <span class="pie-income">70%</span>
+            <span class="pie-outcome">30%</span>
+          </div>
+          <div id="feeCard" class="card header-chart-card">
             <button class="close">&times;</button>
             <h5 class="header-card-title">Средняя комиссия</h5>
             <div class="header-card-body">
@@ -1001,7 +1217,7 @@
       </div>     
     </main>
   </div>
-  </div> -->
+  </div>
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
