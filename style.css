@@ -586,6 +586,10 @@ a {
   margin-left: 10px;
 }
 
+.mobile-table-card {
+  margin-bottom: 50px;
+}
+
 .table-card .header-card-title,
 .mobile-table-card .header-card-title {
   font-size: 10px;
@@ -641,12 +645,43 @@ a {
   text-align: center;
 }
 
-.mobile-card-row .info-pill {
+.mobile-card-row .info-pill,
+.mobile-card-body .info-pill {
   display: block;
   color: #ffffff;
   width: 68px;
   height: 16px;
   border-radius: 30px;
+}
+
+.expand-btn {
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile-card-body {
+  font-size: 9px;
+  font-weight: 500;
+  background-color: #ffffff;
+  padding-left: 21px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.mobile-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 68px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+}
+
+.mobile-item-header {
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .main-info-row {
@@ -699,11 +734,11 @@ a {
   text-transform: uppercase;
 }
 
-.main-info-row .income-negative {
+.income-negative {
   color: #ff6262;
 }
 
-.main-info-row .income-positive {
+.income-positive {
   color: #00d9b2;
 }
 
@@ -711,6 +746,14 @@ a {
   border: 1px solid #009dd9;
   text-transform: uppercase;
   color: #555555;
+}
+
+.mobile-card-body .direction-pill {
+  border: 1px solid #009dd9;
+  text-transform: uppercase;
+  color: #555555;
+  text-align: center;
+  font-size: 11px;
 }
 
 .mycheckbox {

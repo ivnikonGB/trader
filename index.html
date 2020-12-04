@@ -1320,31 +1320,359 @@
             <span>Дата</span>
             <span>Инструмент</span>
           </div>
-          <div class="d-flex juctify-content-start mobile-card-row">
-            <button 
-              class="collapsed"
-              type="button" data-toggle="collapse" 
-              data-target="#tableRow1" 
-              aria-controls="tableRow" 
-              aria-expanded="false" 
-              aria-label="Toggle table rows"
-            >
-              <img src="img/right_arrow.svg" alt="">
-            </button>
-            <div class="d-flex justify-content-between">
-              <span class="info-pill status-open">открыто</span>
-              <span class="open-date">21.11.2020</span>
-              <span class="tool">FB</span>
-              <div class="collapse" id="tableRow1">
-                <span class="enter-pay">$ 25.00</span>
-                <span class="exit-pay">$ 25.00</span>
-                <span class="income income-negative">-$ 200.00</span>
-                <span class="info-pill direction-pill">long</span>
-                <span class="duration">2:10:25</span>
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading1">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow1" 
+                  aria-controls="tableRow1" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-open">открыто</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
               </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow1"
+                aria-labelledby="rowHeading1"
+                data-parent="#accordionExample"
+              >
+                <div class="d-flex flex-wrap mobile-card-body">
+                  <div class="mobile-card-item">
+                    <div class="mobile-item-header">вход $</div>
+                    <div class="enter-pay">$ 25.00</div>
+                  </div>
+                  <div class="mobile-card-item">
+                    <div class="mobile-item-header">выход $</div>
+                    <div class="exit-pay">$ 25.00</div>
+                  </div>
+                  <div class="mobile-card-item">
+                    <div class="mobile-item-header">прибыль</div>
+                    <div class="income income-negative">-$ 200.00</div>
+                  </div>
+                  <div class="mobile-card-item">
+                    <div class="mobile-item-header">направление</div>
+                    <div class="info-pill direction-pill">long</div>
+                  </div>
+                  <div class="mobile-card-item">
+                    <div class="mobile-item-header">время в сделке</div>
+                    <div class="duration">2:10:25</div>
+                  </div>
+                </div>
+              </div>             
             </div>
-            
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading2">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow2" 
+                  aria-controls="tableRow2" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-open">открыто</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow2"
+                aria-labelledby="rowHeading2"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-negative">-$ 200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading3">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow3" 
+                  aria-controls="tableRow3" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-close">закрыта</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow3"
+                aria-labelledby="rowHeading3"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-positive">$ 200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading4">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow4" 
+                  aria-controls="tableRow4" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-win">выигрыш</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow4"
+                aria-labelledby="rowHeading4"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay"></div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-positive">+$200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading5">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow5" 
+                  aria-controls="tableRow5" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-open">открыто</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow5"
+                aria-labelledby="rowHeading5"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-negative">-$ 200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading6">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow6" 
+                  aria-controls="tableRow6" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-open">открыто</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow6"
+                aria-labelledby="rowHeading6"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-negative">-$ 200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>
+            <div class="card">
+              <div class="d-flex align-items-center mobile-card-row" id="rowHeading7">
+                <button 
+                  class="btn btn-link text-left expand-btn"
+                  type="button" 
+                  data-toggle="collapse" 
+                  data-target="#tableRow7" 
+                  aria-controls="tableRow7" 
+                  aria-expanded="false" 
+                  aria-label="Toggle table rows"
+                >
+                  <img src="img/right_arrow.svg" alt="">
+                </button>
+                <div class="d-flex justify-content-between">
+                  <span class="info-pill status-open">открыто</span>
+                  <span class="open-date">21.11.2020</span>
+                  <span class="tool">FB</span>
+                </div>
+              </div>
+
+              <div 
+                class="collapse" 
+                id="tableRow7"
+                aria-labelledby="rowHeading7"
+                data-parent="#accordionExample"
+              >
+              <div class="d-flex flex-wrap mobile-card-body">
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">вход $</div>
+                  <div class="enter-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">выход $</div>
+                  <div class="exit-pay">$ 25.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">прибыль</div>
+                  <div class="income income-negative">-$ 200.00</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">направление</div>
+                  <div class="info-pill direction-pill">long</div>
+                </div>
+                <div class="mobile-card-item">
+                  <div class="mobile-item-header">время в сделке</div>
+                  <div class="duration">2:10:25</div>
+                </div>
+              </div>
+              </div>             
+            </div>  
           </div>
+          
         </div>
         <div class="d-none d-xl-flex flex-column flex-wrap header-chart-card-block">
           <div id="effCard" class="card header-chart-card">
