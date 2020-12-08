@@ -33,7 +33,7 @@ a {
 
 .main-header {
   height: 96px;
-  margin-left: 88px;
+  padding-left: 88px;
 }
 
 .main-header, .main-nav {
@@ -213,12 +213,21 @@ a {
 }
 
 .main-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 55px;
+  height: 100vh;
   padding-left: 7px;
-  z-index: 200;
+  z-index: 1050;
+}
+
+.main-logo {
+  margin-top: 15px;
+}
+
+.up-menu {
+  height: 100%;
 }
 
 #mainMenu {
@@ -233,12 +242,16 @@ a {
   color: #ffffff;
 }
 
-.main-menu-item, .file-menu-item
- {
-  position: relative;   
-  padding-left: 20px;
+.main-menu-item, 
+.file-menu-item
+ {  
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.user-menu-item {
+  margin-bottom: 65px;
 }
 
 .pie-chart-submenu {
@@ -285,12 +298,6 @@ a {
   display: block;
 }
 
-.user-menu-item {
-  padding-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
 .main-content {
   padding-top: 17px;
   background-color: #e5e5e5;
@@ -298,7 +305,7 @@ a {
 
 @media (min-width: 1200px) {
   .main-content {
-    margin-left: 100px;
+    padding-left: 55px;
   }
 }
 
@@ -319,6 +326,11 @@ a {
   padding-left: 10px;
   margin-right: 11px;
   margin-bottom: 11px;
+}
+
+.chart-card-tablets {
+  overflow-x: auto;
+  width: 1094px;
 }
 
 .chart-card-mobile .chart-card {
@@ -468,7 +480,8 @@ a {
 }
 
 .header-chart-tablets {
-  overflow: auto;
+  overflow-x: auto;
+  width: 1094px;
 }
 
 .header-chart-tablets .header-chart-card {
@@ -576,6 +589,7 @@ a {
   width: 811px;
   overflow: auto;
   margin-right: 11px;
+  margin-left: 8px;
 }
 
 .center-column .header-chart-card {
